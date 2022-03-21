@@ -16,11 +16,10 @@ $black: #0000;
 
 $droid: 'Droid Serif';
 $arial: 'Arial, Helvetica', sans-serif;
+$openSans: 'Open Sans', sans-serif;
+$brandonGrotesqueR: 'Brandon Grotesque Regular', sans-serif;
 
-// Globales
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+// Globals
+body{
+  margin: 0;
+}
