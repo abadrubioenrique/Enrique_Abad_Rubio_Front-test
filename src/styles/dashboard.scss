@@ -97,19 +97,21 @@
         }
         &--text{
             text-align: center;
-        }
+            &--left{
+                text-align: left;
+                margin-left: 30px;
+            }
+            &--right{
+                text-align: right;
+                margin-right: 30px;
+            }
+
     }
 }
-
+}
 .borde-izq{
     border-left: 1px solid $grey-2;
 }
 
-.izq{
-    text-align: left;
-    margin-left: 30px;
-}
-.derch{
-    text-align: right;
-    margin-right: 30px;
-}
+
+

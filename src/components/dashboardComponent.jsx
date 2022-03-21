@@ -17,7 +17,7 @@ const Dashboardcomponent = () => {
                 <div className='card__buttom--like'>
                     <AiFillLike/>
                 </div>      
-                <div className='card__buttom--text izq'>
+                <div className='card__buttom--text--left'>
                 <h1>000</h1>
                 </div>        
 
@@ -26,7 +26,7 @@ const Dashboardcomponent = () => {
                 <div className='card__buttom--repost'>
                     <AiOutlineReload/>
                 </div>
-                <div className='card__buttom--text derch'>
+                <div className='card__buttom--text--right'>
                 <h1>000</h1>
                 </div>   
             </div>
