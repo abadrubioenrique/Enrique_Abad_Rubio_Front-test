@@ -1,0 +1,37 @@
+@import './styles.scss';
+
+.nav{
+    display: flex;
+    background-color: $white;
+    align-items: center;
+    position: relative;
+    padding-top: 40px;
+
+    &__logo{
+        width: 100px;
+        height: 100px;
+        top:40px;
+        margin-left: 3%;
+    }
+    &__search{
+        position: absolute;
+        right: 0;
+        margin-right: 3%;
+        input{
+            min-width: 180px;
+            padding: 4px 10px 4px 25px;
+            border-radius: 10px;
+            border: 0;
+            background-color: $grey-1;
+            &:focus{
+                outline-color:$powergreen;
+                opacity: 0.6;
+            }
+        }
+        &__icon{
+            position: absolute;
+            margin: 3px 0 0 4px;
+            color: $grey-4;
+        }
+    }
+}
