@@ -10,12 +10,11 @@ const Headercomponent = () => {
             <img src={logo} alt="Logo"/>
             </div>
             <div className="nav__search">
-            <div className="nav__search__icon">
-            <FiSearch/>
-            </div>
-            
-                <input type='text' placeholder="You're looking for something?"></input>
-            </div>
+                <div className="nav__icon">
+                    <FiSearch/>
+                </div>
+                    <input type='text' placeholder="You're looking for something?"></input>
+                </div>
         </div>
 
     );

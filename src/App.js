@@ -1,9 +1,9 @@
-import Headercomponent from "./components/headerComponent";
+import Dashboardpage from "./pages/dashboardPage";
 
 function App() {
   return (
 
-    <Headercomponent></Headercomponent>
+    <Dashboardpage></Dashboardpage>
 
   );
 }

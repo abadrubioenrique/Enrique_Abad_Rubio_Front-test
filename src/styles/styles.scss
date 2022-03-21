@@ -15,5 +15,12 @@ $black: #0000;
 // Fonts
 
 $droid: 'Droid Serif';
+$arial: 'Arial, Helvetica', sans-serif;
 
 // Globales
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
