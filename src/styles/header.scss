@@ -23,10 +23,14 @@
             border-radius: 10px;
             border: 0;
             background-color: $grey-1;
+            &::placeholder{
+                color: $grey-2;
+            }
             &:focus{
                 outline-color:$powergreen;
                 opacity: 0.6;
             }
+
         }
         &__icon{
             position: absolute;
