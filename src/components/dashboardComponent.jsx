@@ -6,10 +6,20 @@ const Dashboardcomponent = () => {
         <div className="dashboard">
         <div className="card">
         <div className="card__img">
+            {/* TODO  IMG desde DB*/}
                 <img src='https://picsum.photos/id/100/600'  alt='foto1'/>
+        <div className="card__price">
+            <div className="card__price--triangle">
+            {/* TODO  PRICE desde DB*/}
+                <div className='price'><span>40.00<p>€</p></span></div>
             </div>
+        </div>
+        </div>
+        
             <div className="card__title">
+            {/* TODO TTILE desde DB */}
                 <h1>COOL HAT</h1>
+            {/* TODO AUTHOR desde DB */}
                 <h2><span>by </span>Stylefresh</h2>
             </div>
             <div className="card__media">

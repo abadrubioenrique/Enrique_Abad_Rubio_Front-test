@@ -7,20 +7,52 @@
     padding-top:40px;
     padding-left: 40px;
     padding-right: 40px;
-    
 }
 
 .card{
     background-color: $white;
-    width: 100%;
+    width: 100%;    
     &__img{
-        
+        position: relative;
         img{
             min-width: 200px;
             min-height: 140px;
             max-width: 360px;
             width: 100%;
         }
+    }
+    &__price{
+        position: absolute;
+        left: 0;
+        display: flex;
+        top: 0;
+        align-items: center;
+        width: 100%;
+        .price{
+            position: absolute;
+            top: 18px;
+            left: 18px;
+
+            span{
+                display: flex;
+                font-family: $brandonGrotesqueR;
+                font-size: large;
+                font-weight: bold;
+            }
+            p{
+                margin-top: 5px;
+                margin-left: 2px;
+                padding: 0;
+                font-family: $brandonGrotesqueR;
+                font-size: small;
+                font-weight: 500;
+            }
+        }
+    }
+    &__price--triangle{
+        border-top: solid 100px $white;
+        border-left: solid 0px transparent;
+        border-right: solid 150px $black;
     }
     &__title{
         text-align: center;
@@ -90,6 +122,7 @@
             transform: scaleX(-1);
             svg{
                 padding: 6.5px;
+                transform: rotate(30deg);
             }
             h1{
                 text-align: right;
@@ -109,9 +142,10 @@
     }
 }
 }
+
+
+/* Extras */
+//Borde izq para el boton
 .borde-izq{
     border-left: 1px solid $grey-2;
 }
-
-
-
