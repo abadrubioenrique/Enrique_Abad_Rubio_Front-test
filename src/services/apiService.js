@@ -8,8 +8,6 @@ export const getAllImages = (setCards,setLoading) => {
     })
     .then(data=>{
         setCards(data);
-        console.log(data);
-
     })
     .catch(error=>{
         console.error("Error al realizar la petición Http :", error);
