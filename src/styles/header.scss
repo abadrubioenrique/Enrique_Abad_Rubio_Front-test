@@ -17,21 +17,21 @@
         position: absolute;
         right: 0;
         margin-right: 3%;
-        input{
-            min-width: 180px;
-            padding: 3px 10px 3px 26px;
-            border-radius: 10px;
-            border: 0;
-            background-color: $grey-1;
-            height: 20px;
-            font-family: $arial;
-            &::placeholder{
-                color: $grey-2;
-            }
-            &:focus{
-                outline-color:$powergreen;
-                opacity: 0.6;
-            }
+    }
+    &__input{
+        min-width: 180px;
+        padding: 3px 10px 3px 26px;
+        border-radius: 10px;
+        border: 0;
+        background-color: $grey-1;
+        height: 20px;
+        font-family: $arial;
+        &::placeholder{
+            color: $grey-2;
+        }
+        &:focus{
+            outline-color:$powergreen;
+            opacity: 0.6;
         }
     }
     &__icon{

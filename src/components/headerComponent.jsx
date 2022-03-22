@@ -13,7 +13,7 @@ const Headercomponent = () => {
                 <div className="nav__icon">
                     <FiSearch/>
                 </div>
-                    <input type='text' placeholder="You're looking for something?"></input>
+                    <input className='nav__input' type='text' placeholder="You're looking for something?"></input>
                 </div>
         </div>
 

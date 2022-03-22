@@ -16,28 +16,28 @@ const Dashboardcomponent = () => {
         </div>
         </div>
         
-            <div className="card__title">
+            <div className="card__info">
             {/* TODO TTILE desde DB */}
-                <h1>COOL HAT</h1>
+                <h1 className='card__title'>COOL HAT</h1>
             {/* TODO AUTHOR desde DB */}
-                <h2><span>by </span>Stylefresh</h2>
+                <h2 className='card__author'><span className='card__by'>by </span>Stylefresh</h2>
             </div>
             <div className="card__media">
-            <div className="card__buttom borde-izq">
-                <div className='card__buttom--like'>
+            <div className="button border-right">
+                <div className='button__like'>
                     <AiFillLike/>
                 </div>      
-                <div className='card__buttom--text--left'>
-                <h1>000</h1>
+                <div className='button__text--left'>
+                <h1 className='button__number'>000</h1>
                 </div>        
 
             </div>
-            <div className="card__buttom ">
-                <div className='card__buttom--repost'>
+            <div className="button">
+                <div className='button__repost'>
                     <AiOutlineReload/>
                 </div>
-                <div className='card__buttom--text--right'>
-                <h1>000</h1>
+                <div className='button__text--right'>
+                <h1 className='button__number'>000</h1>
                 </div>   
             </div>
             </div>

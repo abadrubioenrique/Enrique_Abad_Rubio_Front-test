@@ -12,6 +12,7 @@
 .card{
     background-color: $white;
     width: 100%;    
+    border: 1px solid $grey-2;
     &__img{
         position: relative;
         img{
@@ -54,81 +55,82 @@
         border-left: solid 0px transparent;
         border-right: solid 150px $black;
     }
-    &__title{
+    &__info{
         text-align: center;
         display: block;
         padding-top: 15px;
         padding-bottom: 20px;
-        h1{
-            margin: 0;
-            font-family: $openSans;
-            font-weight: 400;
-            font-size: xx-large;
-        }
-        h2{
-            margin: 0;
-            font-family: $droid;
-            font-size: medium;
-            font-weight: 400;
-        }
-        span{
-            color: $grey-2;
-        }
-
     }
+    &__title{
+        margin: 0;
+        font-family: $openSans;
+        font-weight: 400;
+        font-size: xx-large;
+    }
+    &__author{
+        margin: 0;
+        font-family: $droid;
+        font-size: medium;
+        font-weight: 400;
+    }
+    &__by{
+        color: $grey-3;
+    }
+
     &__media{
         display: flex;
     }
-    &__buttom{
+    .button{
         position: relative;
         width: 50%;
         height: 40px;
         background-color: $white;
         border-top: 1px solid $grey-2;
-        border-bottom: 1px solid $grey-2;
-        border-right: 1px solid $grey-2;
-        h1{
+        &__number{
             font-family: $brandonGrotesqueR;
             font-weight: 400;
-            color: $grey-2;
+            color: $grey-3;
             font-size: 20px;
             margin: 0;
             margin-top: 6px;
         }
-        &--like{
+        &__like{
             position: absolute;
             top: 5px;
             right: 40px;
             width: 30px;
             height: 30px;
             color: $white;
-            background-color: $grey-3;
+            background-color: $grey-4;
             border-radius: 20px;
             transform: scaleX(-1);
             svg{
                 padding: 6px;
             }
+            &:hover{
+                background-color: $powergreen;
+            }
 
         }
-        &--repost{
+        &__repost{
             position: absolute;
             top: 5px;
             left: 40px;
             width: 30px;
             height: 30px;
             color: $white;
-            background-color: $grey-3;
+            background-color: $grey-4;
             border-radius: 20px;
             transform: scaleX(-1);
             svg{
                 padding: 6.5px;
                 transform: rotate(30deg);
             }
-            h1{
-                text-align: right;
+            &:hover{
+                background-color: $powerblue;
             }
         }
-        &--text{
+        &__text{
             text-align: center;
             &--left{
                 text-align: left;
@@ -146,6 +148,6 @@
 
 /* Extras */
 //Borde izq para el boton
-.borde-izq{
-    border-left: 1px solid $grey-2;
+.border-right{
+    border-right: 1px solid $grey-2;
 }
