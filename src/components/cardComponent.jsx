@@ -43,7 +43,7 @@ const Cardcomponent = ({card}) => {
   return (
       <div className="card">
         <div className="card__img">
-          <img src={card.main_attachment.small} alt="foto1" />
+          <img src={card.main_attachment.big} alt="foto1" />
           <div className="card__price">
             <div className="card__price--triangle">
               <div className="price">
