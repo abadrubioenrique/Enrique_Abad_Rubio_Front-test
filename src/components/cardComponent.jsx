@@ -20,25 +20,22 @@ const Cardcomponent = () => {
       num_convert = num;
     }
 
+    /* Función que se encarga de gestionar si liked es true o false y añadirle el color */
     function likedIcon(){
       if(defaultCard.liked){
           return (
             <div className="button__like button__like--liked">
-            {/* LIKED -> button__like--liked */}
               <AiFillLike />
             </div>
           );
       }else{
           return (
             <div className="button__like">
-            {/* LIKED -> button__like--liked */}
               <AiFillLike />
             </div>
           );
       }
   }
-
-  
 
 
   return (
