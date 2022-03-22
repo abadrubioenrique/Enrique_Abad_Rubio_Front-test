@@ -3,13 +3,11 @@ import "../styles/dashboard.scss";
 import { AiFillLike, AiOutlineReload } from "react-icons/ai";
 
 const Cardcomponent = ({card}) => {
- 
-  const num = card.likesCount;
-  let size = 1;
+  const num = card.likes_count;
+  let num_convert=0;
+  if(num!==undefined){
 
-    let num_convert=0;
     let n = num.toString().length;
-    console.log(n)
     if(n===1){
       num_convert="00"+num;
     }else
@@ -18,6 +16,11 @@ const Cardcomponent = ({card}) => {
     }else if (n >=3){
       num_convert = num;
     }
+  }
+
+
+  
+
 
     /* Función que se encarga de gestionar si liked es true o false y añadirle el color */
     function likedIcon(){
@@ -40,11 +43,9 @@ const Cardcomponent = ({card}) => {
   return (
       <div className="card">
         <div className="card__img">
-          {/* TODO  IMG desde DB*/}
-          <img src={card.mainAttachment[size]} alt="foto1" />
+          <img src={card.main_attachment.small} alt="foto1" />
           <div className="card__price">
             <div className="card__price--triangle">
-              {/* TODO  PRICE desde DB*/}
               <div className="price">
                 <span className="price__number">
                 {card.price}.00<p className="price__icon">€</p>
@@ -55,18 +56,13 @@ const Cardcomponent = ({card}) => {
         </div>
 
         <div className="card__info">
-          {/* TODO TTILE desde DB */}
           <h1 className="card__title">{card.title}</h1>
-          {/* TODO AUTHOR desde DB */}
           <h2 className="card__author">
             <span className="card__by">by </span>{card.author}
           </h2>
         </div>
         <div className="card__media">
           <div className="button border-right">
-            {/* <div className="button__like">
-              <AiFillLike />
-            </div> */}
             {likedIcon()}
             <div className="button__text--left">
               <h1 className="button__number">{num_convert}</h1>
