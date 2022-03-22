@@ -1,12 +1,13 @@
-import { SIZE } from "./size.enum";
-
 export class Image_model{
     id= '';
     title= '';
     price= '';
     author= ''; 
     createdAt= '';
-    mainAttachment= SIZE.SMALL;
+    mainAttachment= {
+        big:'',
+        small:''
+    };
     likesCount= '';
     liked= false;
 

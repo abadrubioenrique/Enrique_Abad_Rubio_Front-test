@@ -2,13 +2,12 @@ import React from "react";
 import "../styles/dashboard.scss";
 import { AiFillLike, AiOutlineReload } from "react-icons/ai";
 
-import { Image_model } from '../models/image.class';
-import { SIZE } from "../models/size.enum";
-const Cardcomponent = () => {
-  const defaultCard = new Image_model(2,"Grey beach",43,"Mary Robinette","2012-12-12T21: 08: 20Z", SIZE.SMALL, 1, false);
-  const num = defaultCard.likesCount;
-  let num_convert=0;
+const Cardcomponent = ({card}) => {
+ 
+  const num = card.likesCount;
+  let size = 1;
 
+    let num_convert=0;
     let n = num.toString().length;
     console.log(n)
     if(n===1){
@@ -22,7 +21,7 @@ const Cardcomponent = () => {
 
     /* Función que se encarga de gestionar si liked es true o false y añadirle el color */
     function likedIcon(){
-      if(defaultCard.liked){
+      if(card.liked){
           return (
             <div className="button__like button__like--liked">
               <AiFillLike />
@@ -42,13 +41,13 @@ const Cardcomponent = () => {
       <div className="card">
         <div className="card__img">
           {/* TODO  IMG desde DB*/}
-          <img src="https://picsum.photos/id/100/600" alt="foto1" />
+          <img src={card.mainAttachment[size]} alt="foto1" />
           <div className="card__price">
             <div className="card__price--triangle">
               {/* TODO  PRICE desde DB*/}
               <div className="price">
                 <span className="price__number">
-                {defaultCard.price}.00<p className="price__icon">€</p>
+                {card.price}.00<p className="price__icon">€</p>
                 </span>
               </div>
             </div>
@@ -57,10 +56,10 @@ const Cardcomponent = () => {
 
         <div className="card__info">
           {/* TODO TTILE desde DB */}
-          <h1 className="card__title">{defaultCard.title}</h1>
+          <h1 className="card__title">{card.title}</h1>
           {/* TODO AUTHOR desde DB */}
           <h2 className="card__author">
-            <span className="card__by">by </span>{defaultCard.author}
+            <span className="card__by">by </span>{card.author}
           </h2>
         </div>
         <div className="card__media">

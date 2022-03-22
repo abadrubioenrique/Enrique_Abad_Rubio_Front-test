@@ -1,5 +1,5 @@
 import React from 'react';
-import Cardcomponent from '../components/cardComponent';
+import Dashboardcomponent from '../components/dashboardComponent';
 import Headercomponent from '../components/headerComponent';
 
 import "../styles/dashboard.scss";
@@ -8,10 +8,7 @@ const Dashboardpage = () => {
     return (
         <div>
             <Headercomponent></Headercomponent>
-            <div className='dashboard'>
-                <Cardcomponent></Cardcomponent>
-                <Cardcomponent></Cardcomponent>
-            </div>
+            <Dashboardcomponent></Dashboardcomponent>
             
 
         </div>
