@@ -1,12 +1,19 @@
 import React from 'react';
-import Dashboardcomponent from '../components/dashboardComponent';
+import Cardcomponent from '../components/cardComponent';
 import Headercomponent from '../components/headerComponent';
+
+import "../styles/dashboard.scss";
 
 const Dashboardpage = () => {
     return (
         <div>
             <Headercomponent></Headercomponent>
-            <Dashboardcomponent></Dashboardcomponent>
+            <div className='dashboard'>
+                <Cardcomponent></Cardcomponent>
+                <Cardcomponent></Cardcomponent>
+            </div>
+            
+
         </div>
     );
 }

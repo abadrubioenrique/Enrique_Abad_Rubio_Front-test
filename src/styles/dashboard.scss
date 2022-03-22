@@ -3,16 +3,14 @@
 
 .dashboard{
     background-color: $grey-1;
-    height: 100vh;
-    padding-top:40px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 40px 20px 40px;
 }
 
 .card{
     background-color: $white;
     width: 100%;    
     border: 1px solid $grey-2;
+    margin-bottom: 20px;
     &__img{
         position: relative;
         img{
@@ -34,13 +32,13 @@
             top: 18px;
             left: 18px;
 
-            span{
+            &__number{
                 display: flex;
                 font-family: $brandonGrotesqueR;
                 font-size: large;
                 font-weight: bold;
             }
-            p{
+            &__icon{
                 margin-top: 5px;
                 margin-left: 2px;
                 padding: 0;
@@ -110,6 +108,9 @@
             &:hover{
                 background-color: $powergreen;
             }
+            &--liked{
+                background-color: $powergreen;
+            }
 
         }
         &__repost{
@@ -151,3 +152,4 @@
 .border-right{
     border-right: 1px solid $grey-2;
 }
+
