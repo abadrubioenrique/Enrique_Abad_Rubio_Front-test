@@ -17,12 +17,24 @@ const Dashboardcomponent = () => {
     getAllImages(setCards, setLoading);
   }, []);
 
+  function likedCard(card){
+    const index = cards.indexOf(card);
+    const tempCard=[...cards];
+    tempCard[index].liked = !tempCard[index].liked;
+    if(tempCard[index].liked ===true){
+      tempCard[index].likes_count ++;
+    }else{
+      tempCard[index].likes_count--;
+    }
+    setCards(tempCard);
+
+}
   return (
     <div>
       {!loading ? (
         <div className="dashboard">
           {cards.map((card, index) => {
-            return <Cardcomponent key={index} card={card} />;
+            return <Cardcomponent key={index} card={card} liked={likedCard} />;
           })}
         </div>
       ) : (

@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/dashboard.scss";
 import { AiFillLike, AiOutlineReload } from "react-icons/ai";
 
-const Cardcomponent = ({card}) => {
+const Cardcomponent = ({card, liked}) => {
   const num = card.likes_count;
   let num_convert=0;
   if(num!==undefined){
@@ -18,21 +18,17 @@ const Cardcomponent = ({card}) => {
     }
   }
 
-
-  
-
-
     /* Función que se encarga de gestionar si liked es true o false y añadirle el color */
     function likedIcon(){
       if(card.liked){
           return (
-            <div className="button__like button__like--liked">
+            <div className="button__like button__like--liked" onClick={()=>liked(card)}>
               <AiFillLike />
             </div>
           );
       }else{
           return (
-            <div className="button__like">
+            <div className="button__like" onClick={()=>liked(card)}>
               <AiFillLike />
             </div>
           );
