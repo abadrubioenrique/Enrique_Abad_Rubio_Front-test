@@ -94,6 +94,21 @@
             right: 0;
             border: none;
        }
+       &--like-display{
+        @media(min-width: 768px){
+            display: block;
+            background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 42%, rgba(255,255,255,0) 100%);
+            transition: ease-in .2s;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            &:hover{
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+        
+    }
     }
     .button{
         position: relative;
@@ -148,7 +163,7 @@
             }
             &:hover{
                 cursor: pointer;
-                opacity: 0.5;
+                opacity: 0.7;
             }
             &--liked{
                 background-color: $powergreen;
@@ -188,7 +203,7 @@
             
             &:hover{
                 cursor: pointer;
-                opacity: 0.5;
+                opacity: 0.7;
             }
         }
         &__text{
@@ -223,20 +238,5 @@
     border-right: 1px solid $grey-2;
 }
 
-.imghover{
-    display: none;
-    @media(min-width: 768px){
-        display: block;
-        background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 42%, rgba(255,255,255,0) 100%);
-        transition: ease-in .2s;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        &:hover{
-            cursor: pointer;
-            opacity: 1;
-        }
-    }
-    
-}
+
 

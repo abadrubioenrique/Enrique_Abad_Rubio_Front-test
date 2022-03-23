@@ -57,7 +57,7 @@ const Cardcomponent = ({card, liked}) => {
             <span className="card__by">by </span>{card.author}
           </h2>
         </div>
-        <div className="card__media imghover">
+        <div className="card__media card__media--like-display">
           <div className="button border-right">
             {likedIcon()}
             <div className="button__text--left">
