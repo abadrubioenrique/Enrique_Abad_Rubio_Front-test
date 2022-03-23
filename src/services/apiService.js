@@ -1,13 +1,14 @@
 
-export const getAllImages = (setCards,setLoading) => {
-    fetch('http://localhost:3100/images',{method: 'GET'}).then(response=>{
+export const getAllImages = (pageNum,setCards, cards ,setLoading) => {
+    fetch(`http://localhost:3100/images?page=${pageNum}`,{method: 'GET'}).then(response=>{
         if(response.ok){
             return response.json();
         }
         throw response;
     })
     .then(data=>{
-        setCards(data);
+        let allCards= new Set([...cards,...data])
+        setCards([...allCards]);
     })
     .catch(error=>{
         console.error("Error al realizar la petición Http :", error);
