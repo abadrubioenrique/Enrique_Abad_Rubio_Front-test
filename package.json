@@ -17,7 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@mocks-server/main": "^2.4.0"
+    "@mocks-server/main": "^2.4.0",
+    "react-test-renderer": "^17.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

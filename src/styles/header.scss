@@ -1,43 +1,55 @@
-@import './styles.scss';
+@import "./styles.scss";
 
-.nav{
-    display: flex;
-    background-color: $white;
-    align-items: center;
-    position: relative;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    &__logo{
-        width: 100px;
-        height: 100px;
-        top:40px;
-        margin-left: 3%;
+.nav {
+  display: flex;
+  background-color: $white;
+  align-items: center;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__logo {
+    width: 100px;
+    height: 100px;
+    top: 40px;
+    margin-left: 3%;
+  }
+  &__search {
+    position: absolute;
+    right: 0;
+    margin-right: 3%;
+  }
+  &__input {
+    min-width: 180px;
+    padding: 3px 10px 3px 26px;
+    border-radius: 20px;
+    border: 0;
+    background-color: $grey-1;
+    height: 20px;
+    font-family: $arial;
+    @media (min-width: 768px) {
+      font-size: medium;
+      height: 24px;
+      border-radius: 20px;
+      min-width: 215px;
+      padding: 3px 10px 3px 35px;
     }
-    &__search{
-        position: absolute;
-        right: 0;
-        margin-right: 3%;
+
+    &::placeholder {
+      color: $grey-3;
     }
-    &__input{
-        min-width: 180px;
-        padding: 3px 10px 3px 26px;
-        border-radius: 10px;
-        border: 0;
-        background-color: $grey-1;
-        height: 20px;
-        font-family: $arial;
-        &::placeholder{
-            color: $grey-2;
-        }
-        &:focus{
-            outline-color:$powergreen;
-            opacity: 0.6;
-        }
+    &:focus {
+      outline: 1px solid $powergreen;
+      box-shadow: 0 0 5px 1px $powergreen;
+      opacity: 0.6;
     }
-    &__icon{
-        position: absolute;
-        margin: 5px 0 0 4px;
-        color: $grey-4;
-        
+  }
+  &__icon {
+    position: absolute;
+    margin: 5px 0 0 5px;
+    color: $grey-5;
+    @media (min-width: 768px) {
+      font-size: 20px;
+      margin: 5px 0 0 7px;
     }
+  }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/dashboard.scss";
 import { AiFillLike, AiOutlineReload } from "react-icons/ai";
 
-const Cardcomponent = ({card, liked}) => {
+const Cardcomponent = ({card = [''], liked}) => {
   const num = card.likes_count;
   let num_convert=0;
   if(num!==undefined){
@@ -10,8 +10,7 @@ const Cardcomponent = ({card, liked}) => {
     let n = num.toString().length;
     if(n===1){
       num_convert="00"+num;
-    }else
-    if(n>1 && n<3){
+    }else if(n>1 && n<3){
       num_convert = "0" + num;
     }else if (n >=3){
       num_convert = num;
@@ -22,13 +21,13 @@ const Cardcomponent = ({card, liked}) => {
     function likedIcon(){
       if(card.liked){
           return (
-            <div className="button__like button__like--liked" onClick={()=>liked(card)}>
+            <div data-testid="like" className="button__like button__like--liked" onClick={()=>liked(card)}>
               <AiFillLike />
             </div>
           );
       }else{
           return (
-            <div className="button__like" onClick={()=>liked(card)}>
+            <div data-testid="like" className="button__like" onClick={()=>liked(card)}>
               <AiFillLike />
             </div>
           );
@@ -37,9 +36,15 @@ const Cardcomponent = ({card, liked}) => {
 
 
   return (
+
       <div className="card">
         <div className="card__img">
-          <img src={card.main_attachment.big} alt="foto1" />
+        {card.main_attachment!==undefined?
+          <img src={card.main_attachment.big}  alt={"Imagen " + card.title}/>
+        :
+          <img src="https://www.prmtx.com/wp-content/plugins/ninja-forms/assets/img/no-image-available-icon-6.jpg" alt="Imagen no disponible"/>
+        }
+
           <div className="card__price">
             <div className="card__price--triangle">
               <div className="price">
