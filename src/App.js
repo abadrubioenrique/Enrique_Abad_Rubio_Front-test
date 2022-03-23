@@ -1,9 +1,9 @@
-import Dashboardpage from "./pages/dashboardPage";
+import DashboardPage from "./pages/dashboardPage";
 
 function App() {
   return (
 
-    <Dashboardpage></Dashboardpage>
+    <DashboardPage/>
 
   );
 }
