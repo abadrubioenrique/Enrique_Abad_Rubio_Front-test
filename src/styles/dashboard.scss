@@ -1,242 +1,233 @@
-@import './styles.scss';
+@import "./styles.scss";
 
-
-.dashboard{
-    background-color: $grey-1;
-    padding: 40px 40px 20px 40px;
+.dashboard {
+  background-color: $grey-1;
+  padding: 40px 40px 20px 40px;
+  display: grid;
+  @media (min-width: 768px) {
     display: grid;
-    @media (min-width: 768px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 20px;
-    }
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
 }
 
-.card{
-    background-color: $white;
-    width: 100%;    
-    border: 1px solid $grey-2;
-    margin-bottom: 20px;
-    @media (min-width: 768px) {
-         position: relative;   
+.card {
+  background-color: $white;
+  width: 100%;
+  border: 1px solid $grey-2;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    position: relative;
+  }
+  &__img {
+    position: relative;
+    min-width: 200px;
+    min-height: 140px;
+    max-width: 1fr;
+    img {
+      width: 100%;
     }
-    &__img{
-        position: relative;
-        min-width: 200px;
-        min-height: 140px;
-        max-width: 1fr;
-        img{
-           width: 100%;
-        }
-    }
-    &__price{
-        position: absolute;
-        left: 0;
-        display: flex;
-        top: 0;
-        align-items: center;
-        width: 100%;
-        .price{
-            position: absolute;
-            top: 18px;
-            left: 18px;
+  }
+  &__price {
+    position: absolute;
+    left: 0;
+    display: flex;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    .price {
+      position: absolute;
+      top: 18px;
+      left: 18px;
 
-            &__number{
-                display: flex;
-                font-family: $brandonGrotesqueR;
-                font-size: large;
-                font-weight: bold;
-            }
-            &__icon{
-                margin-top: 5px;
-                margin-left: 2px;
-                padding: 0;
-                font-family: $brandonGrotesqueR;
-                font-size: small;
-                font-weight: 500;
-            }
-        }
+      &__number {
+        display: flex;
+        font-family: $brandonGrotesqueR;
+        font-size: large;
+        font-weight: bold;
+      }
+      &__icon {
+        margin-top: 5px;
+        margin-left: 2px;
+        padding: 0;
+        font-family: $brandonGrotesqueR;
+        font-size: small;
+        font-weight: 500;
+      }
     }
-    &__price--triangle{
-        border-top: solid 100px $white;
-        border-left: solid 0px transparent;
-        border-right: solid 150px $black;
+  }
+  &__price--triangle {
+    border-top: solid 100px $white;
+    border-left: solid 0px transparent;
+    border-right: solid 150px $black;
+  }
+  &__info {
+    text-align: center;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  &__title {
+    margin: 0;
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: xx-large;
+    text-transform: uppercase;
+  }
+  &__author {
+    margin: 0;
+    font-family: $droid;
+    font-size: medium;
+    font-weight: 400;
+  }
+  &__by {
+    color: $grey-3;
+  }
+
+  &__media {
+    display: flex;
+    @media (min-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
     }
-    &__info{
-        text-align: center;
+    &--like-display {
+      @media (min-width: 768px) {
         display: block;
-        padding-top: 15px;
-        padding-bottom: 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 42%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transition: ease-in 0.2s;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        &:hover {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
     }
-    &__title{
-        margin: 0;
-        font-family: $openSans;
-        font-weight: 400;
-        font-size: xx-large;
-        text-transform: uppercase;
+  }
+  .button {
+    position: relative;
+    width: 50%;
+    height: 40px;
+    border-top: 1px solid $grey-2;
+    @media (min-width: 768px) {
+      width: 100%;
+      border: none;
     }
-    &__author{
-        margin: 0;
-        font-family: $droid;
-        font-size: medium;
-        font-weight: 400;
+    &__number {
+      font-family: $brandonGrotesqueR;
+      font-weight: 400;
+      color: $grey-3;
+      font-size: 20px;
+      margin: 0;
+      margin-top: 6px;
+      @media (min-width: 768px) {
+        position: static;
+        color: $white;
+        padding-top: 60px;
+        margin-top: 40px;
+        padding-right: 20px;
+      }
     }
-    &__by{
-        color: $grey-3;
-    }
-
-    &__media{
-        display: flex;
+    &__like {
+      position: absolute;
+      top: 5px;
+      right: 40px;
+      width: 30px;
+      height: 30px;
+      color: $white;
+      background-color: $grey-4;
+      border-radius: 20px;
+      transform: scaleX(-1);
+      @media (min-width: 768px) {
+        margin-top: 0px;
+        right: 13px;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        color: $grey-4;
+        background-color: $white;
+      }
+      svg {
+        padding: 6px;
         @media (min-width: 768px) {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            border: none;
-       }
-       &--like-display{
-        @media(min-width: 768px){
-            display: block;
-            background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 42%, rgba(255,255,255,0) 100%);
-            transition: ease-in .2s;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            &:hover{
-                cursor: pointer;
-                opacity: 1;
-            }
+          padding: 9px;
         }
-        
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+      &--liked {
+        background-color: $powergreen;
+        @media (min-width: 768px) {
+          color: $white;
+        }
+      }
     }
+    &__repost {
+      position: absolute;
+      top: 5px;
+      left: 40px;
+      width: 30px;
+      height: 30px;
+      color: $white;
+      background-color: $grey-4;
+      border-radius: 20px;
+      transform: scaleX(-1);
+      @media (min-width: 768px) {
+        margin-top: 5px;
+        left: calc(100% - 65px);
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+      }
+
+      svg {
+        padding: 6.5px;
+        transform: rotate(30deg);
+        @media (min-width: 768px) {
+          padding: 9px;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
     }
-    .button{
-        position: relative;
-        width: 50%;
-        height: 40px;
-        border-top: 1px solid $grey-2;
-        @media(min-width: 768px){
-            width: 100%;
-            border: none;
-        }
-        &__number{
-            font-family: $brandonGrotesqueR;
-            font-weight: 400;
-            color: $grey-3;
-            font-size: 20px;
-            margin: 0;
-            margin-top: 6px;
-            @media(min-width: 768px){
-                position: static;
-                color: $white;
-                padding-top: 60px;
-                margin-top: 40px;
-                padding-right: 20px;
-                
-            }
-        }
-        &__like{
-            position: absolute;
-            top: 5px;
-            right: 40px;
-            width: 30px;
-            height: 30px;
-            color: $white;
-            background-color: $grey-4;
-            border-radius: 20px;
-            transform: scaleX(-1);
-            @media(min-width: 768px){
-                margin-top: 0px;
-                right: 13px;
-                font-size: 30px;
-                width: 50px;
-                height: 50px;
-                border-radius: 30px;
-                color: $grey-4;
-                background-color: $white;
-            }
-            svg{
-                padding: 6px;
-                @media(min-width: 768px){
-                    padding: 9px;
-                }
-            }
-            &:hover{
-                cursor: pointer;
-                opacity: 0.7;
-            }
-            &--liked{
-                background-color: $powergreen;
-                @media(min-width: 768px){
-                    color: $white;
-                }
-                
-            }
+    &__text {
+      text-align: center;
 
+      &--left {
+        text-align: left;
+        margin-left: 30px;
+        @media (min-width: 768px) {
+          text-align: right;
+          margin-left: 0;
+          margin-right: 2px;
         }
-        &__repost{
-            position: absolute;
-            top: 5px;
-            left: 40px;
-            width: 30px;
-            height: 30px;
-            color: $white;
-            background-color: $grey-4;
-            border-radius: 20px;
-            transform: scaleX(-1);
-            @media(min-width: 768px){
-                margin-top: 5px;
-                left: calc(100% - 65px);
-                font-size: 30px;
-                width: 50px;
-                height: 50px;
-                border-radius: 30px;
-            }
-            
-            svg{
-                padding: 6.5px;
-                transform: rotate(30deg);
-                @media(min-width: 768px){
-                    padding: 9px;
-                }
-            }
-            
-            &:hover{
-                cursor: pointer;
-                opacity: 0.7;
-            }
+      }
+      &--right {
+        text-align: right;
+        margin-right: 30px;
+        @media (min-width: 768px) {
+          margin-right: 0;
         }
-        &__text{
-            text-align: center;
-            
-            &--left{
-                text-align: left;
-                margin-left: 30px;
-                @media(min-width: 768px){
-                    text-align: right;
-                    margin-left: 0;  
-                    margin-right: 2px;
-                }
-                
-            }
-            &--right{
-                text-align: right;
-                margin-right: 30px;
-                @media(min-width: 768px){
-                    margin-right: 0;  
-                }
-            }
-
+      }
     }
+    &--border-right {
+      border-right: 1px solid $grey-2;
+    }
+  }
 }
-}
-
-
-/* Extras */
-//Borde izq para el boton
-.border-right{
-    border-right: 1px solid $grey-2;
-}
-
-
-

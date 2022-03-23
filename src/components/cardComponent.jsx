@@ -58,7 +58,7 @@ const Cardcomponent = ({card, liked}) => {
           </h2>
         </div>
         <div className="card__media card__media--like-display">
-          <div className="button border-right">
+          <div className="button button--border-right">
             {likedIcon()}
             <div className="button__text--left">
               <h1 className="button__number">{num_convert}</h1>
