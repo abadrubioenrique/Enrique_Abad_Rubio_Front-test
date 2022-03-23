@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Cardcomponent from "./cardComponent";
 import "../styles/dashboard.scss";
 import "../styles/spinner.scss";
-import { getAllImages } from "../services/apiService";
+import { getAllImages, likedImage } from "../services/apiService";
 /* import { Image_model } from '../models/image.class'; */
 
 const Dashboardcomponent = () => {
@@ -20,6 +20,8 @@ const Dashboardcomponent = () => {
   function likedCard(card){
     const index = cards.indexOf(card);
     const tempCard=[...cards];
+    // Petición de like a la API
+    likedImage(cards[index].id)
     tempCard[index].liked = !tempCard[index].liked;
     if(tempCard[index].liked ===true){
       tempCard[index].likes_count ++;

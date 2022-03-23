@@ -1,6 +1,6 @@
 
 export const getAllImages = (setCards,setLoading) => {
-    fetch('http://localhost:3100/images').then(response=>{
+    fetch('http://localhost:3100/images',{method: 'GET'}).then(response=>{
         if(response.ok){
             return response.json();
         }
@@ -15,6 +15,15 @@ export const getAllImages = (setCards,setLoading) => {
     })
     .finally(()=>{
         setLoading(false);
+    })
+    ;
+}
+
+export const likedImage = (id) => {
+    fetch(`http://localhost:3100/images/${id}/likes`,{method: 'POST'})
+    .catch(error=>{
+        console.error("Error al realizar la petición Http :", error);
+
     })
     ;
 }
