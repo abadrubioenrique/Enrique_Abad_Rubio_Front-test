@@ -200,6 +200,7 @@
                 @media(min-width: 768px){
                     text-align: right;
                     margin-left: 0;  
+                    margin-right: 2px;
                 }
                 
             }
@@ -222,46 +223,8 @@
     border-right: 1px solid $grey-2;
 }
 
-
-/* Media Querys */
-
-@media(min-width: 768px){
-    .button__number{
-        color: $white;
-    }
-    .button__like{
-        position: absolute;
-        top: 5px;
-        right: 0;
-        width: 30px;
-        height: 30px;
-        color: $grey-4;
-        background-color: $white;
-        border-radius: 20px;
-        transform: scaleX(-1);
-
-
-    }
-    .button__repost{
-        position: absolute;
-        top: 5px;
-        left: 0;
-        width: 30px;
-        height: 30px;
-        color: $white;
-        background-color: $grey-4;
-        border-radius: 20px;
-        transform: scaleX(-1);
-
-    }
-    .button__text{
-        text-align: center;
-
-}
-
 .imghover{
     display: none;
-
     @media(min-width: 768px){
         display: block;
         background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 42%, rgba(255,255,255,0) 100%);
@@ -276,4 +239,4 @@
     }
     
 }
-}
+
