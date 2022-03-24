@@ -1,8 +1,9 @@
 import { render, fireEvent, screen} from '@testing-library/react';
 import App from './App';
 import Cardcomponent from './components/cardComponent';
-import Dashboardcomponent from './components/dashboardComponent';
 import Headercomponent from './components/headerComponent';
+import DashboardPage from './pages/dashboardPage';
+
 
 describe('React - Testeamos los componentes',()=>{
   test('El componente header se renderiza correctamente', () => {
@@ -13,10 +14,10 @@ describe('React - Testeamos los componentes',()=>{
     const view= render(<Cardcomponent/>);
     expect(view).toBeDefined();
   })
-  test('El componente dashboard se renderiza correctamente', () => {
-    const view= render(<Dashboardcomponent/>);
+/*   test('El componente dashboard se renderiza correctamente', () => {
+    const view= render(<DashboardPage/>);
     expect(view).toBeDefined();
-  })
+  }) */
 })
 
 describe('React - Hacemos un test de integración',()=>{

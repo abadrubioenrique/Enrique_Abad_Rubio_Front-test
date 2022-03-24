@@ -30,7 +30,7 @@ const DashboardPage = () => {
       getAllImages(pageNum, setCards, cards, setLoading, setError);
     }
   }, [pageNum]);
-
+  
   /* Scroll Infinito */
   const observer = useRef(
     new IntersectionObserver((entries) => {
@@ -40,6 +40,7 @@ const DashboardPage = () => {
       }
     })
   );
+
   useEffect(() => {
     const currentElement = lastElement;
     const currentObserver = observer.current;
