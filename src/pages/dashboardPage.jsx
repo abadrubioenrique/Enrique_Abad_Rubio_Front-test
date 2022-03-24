@@ -30,7 +30,7 @@ const DashboardPage = () => {
       getAllImages(pageNum, setCards, cards, setLoading, setError);
     }
   }, [pageNum]);
-  
+
   /* Scroll Infinito */
   const observer = useRef(
     new IntersectionObserver((entries) => {
@@ -55,8 +55,6 @@ const DashboardPage = () => {
       }
     };
   }, [lastElement]);
-
-
 
   /* Barra de Busqueda */
   var cardsConverted = Object.keys(cards).map(function (card) {
