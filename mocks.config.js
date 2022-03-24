@@ -9,7 +9,7 @@ module.exports = {
     mock: "base",
 
     // mocks and routes path
-    // path: "mocks",
+    path: "src/mocks",
 
     // files watch enabled
     // watch: true,
