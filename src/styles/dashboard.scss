@@ -1,5 +1,4 @@
 @import "./styles.scss";
-
 .dashboard {
   background-color: $grey-1;
   padding: 40px 40px 20px 40px;
@@ -9,6 +8,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
   }
+}
+
+.error {
+  color: $error;
+  padding: 10px;
+  text-align: center;
 }
 
 .card {
@@ -112,7 +117,6 @@
       }
     }
   }
-
   .button {
     position: relative;
     width: 50%;
@@ -162,7 +166,6 @@
         @media (min-width: 768px) {
           padding: 9px 10px;
         }
-        
       }
       &:hover {
         cursor: pointer;
@@ -195,7 +198,6 @@
         color: $grey-4;
         background-color: $white;
       }
-
       svg {
         padding: 6.5px;
         transform: rotate(30deg);
@@ -203,7 +205,6 @@
           padding: 9px;
         }
       }
-
       &:hover {
         cursor: pointer;
         opacity: 0.7;
@@ -211,7 +212,6 @@
     }
     &__text {
       text-align: center;
-
       &--left {
         text-align: left;
         margin-left: 30px;

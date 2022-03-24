@@ -6,6 +6,8 @@ $powergreen: #83f3c6;
 
 $powerblue: #43C6FF;
 
+$error:#c91023;
+
 $grey-1:#f6f6f6;
 $grey-2:#e2e2e2;
 $grey-3:#c2c2bd;
@@ -23,6 +25,9 @@ $openSans: 'Open Sans', sans-serif;
 $brandonGrotesqueR: 'Brandon Grotesque Regular', sans-serif;
 
 // Globals
+html{
+  background-color: $grey-1;
+}
 body{
   margin: 0;
 }
